@@ -1,6 +1,6 @@
 from setuptools import setup
 
-version = '0.0dev'
+version = '0.1dev'
 
 setup(
     name="setuptools-markdown",
