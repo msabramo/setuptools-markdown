@@ -17,6 +17,7 @@ setup(
     long_description=long_description,
     license='MIT',
     py_modules=['setuptools_markdown'],
+    zip_safe=False,
     entry_points="""
         [distutils.setup_keywords]
         long_description_markdown_filename=setuptools_markdown:long_description_markdown_filename
