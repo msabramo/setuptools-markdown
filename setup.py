@@ -16,6 +16,7 @@ setup(
     description="Use Markdown for your project description",
     long_description=long_description,
     license='MIT',
+    setup_requires=['pypandoc'],
     py_modules=['setuptools_markdown'],
     zip_safe=False,
     entry_points="""
