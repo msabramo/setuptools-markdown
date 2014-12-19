@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
 
-version = '0.1.dev2'
+version = '0.1'
 long_description_filename = os.path.join(
     os.path.dirname(__file__), 'README.rst')
 long_description = open(long_description_filename).read()
