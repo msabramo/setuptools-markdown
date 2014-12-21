@@ -4,6 +4,19 @@ setuptools-markdown
 Use `Markdown <http://daringfireball.net/projects/markdown/>`__ for your
 project description
 
+
+Install
+=======
+
+1. Install `pandoc <http://johnmacfarlane.net/pandoc/>`_
+
+2. Install this module
+
+.. code:: console
+
+    pip install setuptools-markdown
+
+
 Use
 ===
 
