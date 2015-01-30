@@ -21,6 +21,8 @@ setup(
     zip_safe=False,
     entry_points="""
         [distutils.setup_keywords]
-        long_description_markdown_filename=setuptools_markdown:long_description_markdown_filename
+        long_description_filename=setuptools_markdown:long_description_filename
+        long_description_markdown_filename=setuptools_markdown:long_description_filename
+        long_description_rst_filename=setuptools_markdown:long_description_filename
         """
 )

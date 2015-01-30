@@ -5,8 +5,8 @@ This is a **sample** project
 
 Here's some python:
 
-```python
-def func(a, b):
-    c = a + b
-    return c
-```
+.. code-block:: python
+
+    def func(a, b):
+        c = a + b
+        return c
