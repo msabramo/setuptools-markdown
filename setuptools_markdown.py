@@ -9,17 +9,22 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def long_description_markdown_filename(dist, attr, value):
+def long_description_filename(dist, attr, value):
     logger.debug(
-        'long_description_markdown_filename: '
+        'long_description_filename: '
         'dist = %r; attr = %r; value = %r',
         dist, attr, value)
+    filename = _get_filepath(value)
+    output = pypandoc.convert(filename, 'rst')
+    dist.metadata.long_description = output
+
+
+def _get_filepath(filename):
     frame = _get_code_object()
     setup_py_path = inspect.getsourcefile(frame)
-    markdown_filename = os.path.join(os.path.dirname(setup_py_path), value)
-    logger.debug('markdown_filename = %r', markdown_filename)
-    output = pypandoc.convert(markdown_filename, 'rst')
-    dist.metadata.long_description = output
+    filepath = os.path.join(os.path.dirname(setup_py_path), filename)
+    logger.debug('filepath = %r', filepath)
+    return filepath
 
 
 def _get_code_object():
