@@ -18,7 +18,10 @@ def long_description_markdown_filename(dist, attr, value):
     setup_py_path = inspect.getsourcefile(frame)
     markdown_filename = os.path.join(os.path.dirname(setup_py_path), value)
     logger.debug('markdown_filename = %r', markdown_filename)
-    output = pypandoc.convert(markdown_filename, 'rst')
+    try:
+        output = pypandoc.convert(markdown_filename, 'rst')
+    except OSError:
+        output = open(markdown_filename).read()
     dist.metadata.long_description = output
 
 
