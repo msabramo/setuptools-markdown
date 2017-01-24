@@ -22,7 +22,7 @@ def long_description_markdown_filename(dist, attr, value):
         output = pypandoc.convert(markdown_filename, 'rst')
     except OSError:
         output = open(markdown_filename).read()
-    lines = output.splitlines()
+    lines = output.strip().splitlines()
     while len(lines) >= 2 and (not lines[1] or lines[1].isspace()):
         del lines[1]
     
