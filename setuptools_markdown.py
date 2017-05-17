@@ -24,7 +24,6 @@ import os
 import logging
 import pypandoc
 
-from pypandoc.pandoc_download import download_pandoc
 
 
 logging.basicConfig(level=logging.INFO)
@@ -40,13 +39,7 @@ def long_description_markdown_filename(dist, attr, value):
     setup_py_path = inspect.getsourcefile(frame)
     markdown_filename = os.path.join(os.path.dirname(setup_py_path), value)
     logger.debug('markdown_filename = %r', markdown_filename)
-    try:
-        pypandoc.get_pandoc_path()
-    except OSError:
-        try:
-            download_pandoc()
-        except:
-            pass
+    pypandoc.ensure_pandoc_installed()
     try:
         output = pypandoc.convert(markdown_filename, 'rst', format='md')
     except OSError:
