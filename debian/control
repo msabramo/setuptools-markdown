@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------- #
+# DEBIAN PACKAGE CONTROL FILE                                               #
+#                                                                           #
+# This file is a Debian control file. For more information on the config in #
+# this file, please run `man deb-control`.                                  #
+# ------------------------------------------------------------------------- #
+
+Source:  python3-setuptools-markdown
+Section: contrib/python
+Priority: extra
+Maintainer: Jeff Cliff <jeffrey.cliff@gmail.com>
+Build-Depends: debhelper(>= 9), python3, dh-python, python3-all, python3-setuptools, python3-markdown, pandoc
+Standards-Version: 3.9.5
+
+Package: python3-setuptools-markdown
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1),  python3
+Depends: make, python3-setuptools, python3-markdown, pandoc 
+Description: Use Markdown for your project description
+	apparently this line needs to be here.
