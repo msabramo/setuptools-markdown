@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: eth-utils
-Source: https://github.com/ethereum/eth-utils
+Upstream-Name: setuptools-markdown
+Source: https://github.com/msabramo/setuptools-markdown
 
 Files: *
 Copyright: 2014-2017  Marc Abramowitz
