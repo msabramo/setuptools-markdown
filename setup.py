@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
 
-version = '0.4'
+version = '0.4.1'
 long_description_filename = os.path.join(
     os.path.dirname(__file__), 'README.rst')
 long_description = open(long_description_filename).read()
@@ -13,7 +13,7 @@ setup(
     author_email="marc@marc-abramowitz.com",
     url="https://github.com/msabramo/setuptools-markdown",
     keywords='distutils setuptools markdown',
-    description="Use Markdown for your project description",
+    description="[Deprecated] Use Markdown for your project description",
     long_description=long_description,
     license='MIT',
     install_requires=['pypandoc'],
