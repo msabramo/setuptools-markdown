@@ -4,6 +4,20 @@ setuptools-markdown
 Use `Markdown <http://daringfireball.net/projects/markdown/>`__ for your
 project description
 
+-------------------------------------------------------------------------
+
+This project is deprecated.
+===========================
+
+**Instead of using this, you should use the built-in functionality of
+setuptools and PyPI.**
+
+See `this page
+<https://dustingram.com/articles/2018/03/16/markdown-descriptions-on-pypi/>`__
+for details.
+
+-------------------------------------------------------------------------
+
 
 Install
 =======
