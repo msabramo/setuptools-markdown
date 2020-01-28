@@ -22,10 +22,6 @@ for details.
 Install
 =======
 
-1. Install `pandoc <http://johnmacfarlane.net/pandoc/>`_
-
-2. Install this module
-
 .. code:: console
 
     pip install setuptools-markdown
@@ -50,6 +46,6 @@ Use
 
 The plugin will read the specified file, convert it to
 `reST <http://en.wikipedia.org/wiki/ReStructuredText>`__ using
-`pypandoc <https://pypi.python.org/pypi/pypandoc>`__ and store the
+`m2r <https://github.com/miyakogi/m2r>`__ and store the
 resulting reST in the ``long_description`` metadata field of your
 distribution.

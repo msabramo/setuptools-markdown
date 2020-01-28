@@ -23,7 +23,7 @@ import inspect
 import os
 import logging
 
-import pypandoc
+import m2r
 
 
 logging.basicConfig(level=logging.INFO)
@@ -39,10 +39,7 @@ def long_description_markdown_filename(dist, attr, value):
     setup_py_path = inspect.getsourcefile(frame)
     markdown_filename = os.path.join(os.path.dirname(setup_py_path), value)
     logger.debug('markdown_filename = %r', markdown_filename)
-    try:
-        output = pypandoc.convert(markdown_filename, 'rst', format='md')
-    except OSError:
-        output = open(markdown_filename).read()
+    output = m2r.parse_from_file(markdown_filename)
     lines = output.strip().splitlines()
     while len(lines) >= 2 and (not lines[1] or lines[1].isspace()):
         del lines[1]
