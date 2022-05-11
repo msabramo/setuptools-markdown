@@ -40,7 +40,7 @@ def long_description_markdown_filename(dist, attr, value):
     markdown_filename = os.path.join(os.path.dirname(setup_py_path), value)
     logger.debug('markdown_filename = %r', markdown_filename)
     try:
-        output = pypandoc.convert(markdown_filename, 'rst', format='md')
+        output = pypandoc.convert_text(markdown_filename, 'rst', format='md')
     except OSError:
         output = open(markdown_filename).read()
     lines = output.strip().splitlines()
